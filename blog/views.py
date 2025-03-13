@@ -1,11 +1,16 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 # Create your views here.
 
 def blogHomeView(request):
-    return HttpResponse("<h1>Home</h1>")
+    context = {
+        "title": "Home",
+    }
+    return render(request, "blog/home.html", context)
 
 def blogAboutView(request):
-    return HttpResponse("<h1>About</h1>")
+    context = {
+        "title": "About",
+    }
+    return render(request, "blog/about.html", context)
 
