@@ -1,0 +1,10 @@
+{% extends "blog/base.html" %}
+{% block content %}
+  <h1>Logged out</h1>
+  <div class="border-top pt-3">
+    <small class="text-muted">
+      Need an account? <a class="ml-2" href="{% url 'usersLogin' %}">Login again</a>
+    </small>
+  </div>
+{% endblock content %}
+
