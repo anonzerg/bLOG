@@ -174,5 +174,5 @@ cython_debug/
 .pypirc
 
 # default media dir for website media
-/media
+/media/profile_images
 
