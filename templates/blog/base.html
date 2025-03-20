@@ -37,8 +37,13 @@
               </div>
             </ul>
             <div class="navbar-nav">
-              <a class="nav-item nav-link" href="{% url 'usersLogin' %}">Login</a>
-              <a class="nav-item nav-link" href="{% url 'usersRegister' %}">Register</a>
+              {% if user.is_authenticated %}
+                <a class="nav-item nav-link" href="{% url 'usersProfile' %}">Profile</a>
+                <a class="nav-item nav-link" href="{% url 'usersLogout' %}">Logout</a>
+              {% else %}
+                <a class="nav-item nav-link" href="{% url 'usersLogin' %}">Login</a>
+                <a class="nav-item nav-link" href="{% url 'usersRegister' %}">Register</a>
+              {% endif %}
             </div>
           </div>
         </div>
